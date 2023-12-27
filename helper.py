@@ -98,7 +98,7 @@ def print_centrality(centrality, title):
     print()
 
 
-def get_communities(G):
+def get_communities(G, title):
     """
     Get the communities in the graph using the Greedy Modularity algorithm
     """
@@ -107,7 +107,7 @@ def get_communities(G):
 
     # Output the communities
     for i, comm in enumerate(communities):
-        print(f"Gemeinschaft {i+1}: {sorted(comm)[:10]} ... [{len(comm)} Helden]")  # Show first 10 heroes
+        print(f"Gemeinschaft {i+1}: {sorted(comm)[:10]} ... [{len(comm)} {title}]")  # Show first 10 heroes
         if i >= 4:  # Limit to showing details for the first 5 communities
             break
     
